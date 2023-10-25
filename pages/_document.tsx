@@ -9,16 +9,14 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='ko'>
           <Head>
-            <link rel='shortcut icon' href='/favicon.ico' />
+            <link rel='shortcut icon' href='/favicon.svg' />
             <link
               rel='icon'
-              type='image/png'
-              sizes='32x32'
-              href='favicon.png'
+              type='image/svg'
+              sizes='48x48'
+              href='favicon.svg'
             />
-          </Head>
 
-          <head>
             <link rel='manifest' href='/manifest.json' />
 
             <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -31,7 +29,7 @@ export default class MyDocument extends Document {
               href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap'
               rel='stylesheet'
             ></link>
-          </head>
+          </Head>
 
           <body>
             <script

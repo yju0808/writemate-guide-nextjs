@@ -4,9 +4,9 @@ import * as types from 'notion-types'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import cs from 'classnames'
-import { Breadcrumbs, Header, useNotionContext } from 'react-notion-x'
+import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
-import { navigationLinks, navigationStyle } from '@/lib/config'
+import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
@@ -40,7 +40,7 @@ const ToggleThemeButton = () => {
       className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
       onClick={onToggleTheme}
     >
-      {hasMounted && (
+      {hasMounted && isDarkMode && (
         <a
           className={styles.toggleDarkMode}
           href='#'
@@ -101,6 +101,8 @@ export const NotionPageHeader: React.FC<{
             .filter(Boolean)}
 
           <ToggleThemeButton />
+
+          {isSearchEnabled && <Search block={block} title={null} />}
         </div>
       </div>
     </header>
