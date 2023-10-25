@@ -1,7 +1,14 @@
 import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { Noto_Sans_KR } from 'next/font/google'
 
 import { IconContext } from '@react-icons/all-files'
+
+const notoSansKr = Noto_Sans_KR({
+  preload: false, // 또는 preload: false
+  weight: ['100', '300', '400', '500', '700', '900'],
+  variable: '--font-noto-sans-kr'
+})
 
 export default class MyDocument extends Document {
   render() {
@@ -20,7 +27,7 @@ export default class MyDocument extends Document {
             <link rel='manifest' href='/manifest.json' />
           </Head>
 
-          <body>
+          <body className={`${notoSansKr.className} ${notoSansKr.variable} `}>
             <script
               dangerouslySetInnerHTML={{
                 __html: `
