@@ -17,6 +17,7 @@ const interBoldFontP = fetch(
 export const config = {
   runtime: 'experimental-edge'
 }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function OGImage(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const pageId = searchParams.get('id') || rootNotionPageId
