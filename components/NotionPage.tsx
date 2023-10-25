@@ -28,7 +28,6 @@ import { PageHead } from './PageHead'
 import styles from './styles.module.css'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const WrappedImage = (props) => <Image {...props} quality={50} />
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -155,7 +154,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const components = React.useMemo(
     () => ({
-      nextImage: WrappedImage,
+      nextImage: Image,
       nextLink: Link,
       Code,
       Collection,
