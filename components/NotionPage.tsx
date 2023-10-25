@@ -29,7 +29,7 @@ import { PageHead } from './PageHead'
 import styles from './styles.module.css'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const WrappedImage = (props) => <Image {...props} quality={70} />
+const WrappedImage = (props) => <Image {...props} quality={50} />
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
