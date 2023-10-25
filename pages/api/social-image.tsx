@@ -17,8 +17,7 @@ const interBoldFontP = fetch(
 export const config = {
   runtime: 'experimental-edge'
 }
-
-export default async function OGImage(req: NextRequest) {
+async function OGImage(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const pageId = searchParams.get('id') || rootNotionPageId
   if (!pageId) {
