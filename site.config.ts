@@ -2,19 +2,19 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7672b002f4cc43a1b2b6965e08c24bd6',
+  rootNotionPageId: 'c8b17521cd494182ad91e53b873a7ec7',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: '라이트메이트 - 가이드',
-  domain: 'guide.write-mate.net',
+  name: '라이트메이트 - 이벤트',
+  domain: 'promotion.write-mate.net',
   author: 'WriteMate Studio',
 
   // open graph metadata (optional)
-  description: '라이트메이트 사용 가이드',
+  description: '라이트메이트에서 진행중인 이벤트',
 
   // social usernames (optional)
   // twitter: 'transitive_bs',
